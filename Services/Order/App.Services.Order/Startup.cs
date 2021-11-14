@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using App.Services.Order.Services;
 using App.Services.Order.Settings;
 using Microsoft.Extensions.Options;
 
@@ -26,10 +27,10 @@ namespace App.Services.Order
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IOrderService, OrderService>();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
-
             services.AddSingleton<IDatabaseSettings>(sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
         }
 
