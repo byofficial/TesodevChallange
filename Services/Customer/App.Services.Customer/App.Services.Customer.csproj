@@ -8,5 +8,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.13.2" />
+  </ItemGroup>
+
 
 </Project>
