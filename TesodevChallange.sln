@@ -3,9 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{32F137F9-99F8-47FB-9678-E06F523A53EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customer", "Customer", "{6E460B72-758C-40B6-A59C-B8CDCB528CC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Services.Customer", "Services\Customer\App.Services.Customer\App.Services.Customer.csproj", "{1E4FDD15-86B8-41B6-B7CA-8EDDE009245B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E4FDD15-86B8-41B6-B7CA-8EDDE009245B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E4FDD15-86B8-41B6-B7CA-8EDDE009245B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E4FDD15-86B8-41B6-B7CA-8EDDE009245B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E4FDD15-86B8-41B6-B7CA-8EDDE009245B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E460B72-758C-40B6-A59C-B8CDCB528CC0} = {32F137F9-99F8-47FB-9678-E06F523A53EE}
+		{1E4FDD15-86B8-41B6-B7CA-8EDDE009245B} = {6E460B72-758C-40B6-A59C-B8CDCB528CC0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9910FF8B-6D13-4986-A6DA-B7BFDA600569}
