@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using App.Services.Customer.Services;
 using App.Services.Customer.Settings;
 using Microsoft.Extensions.Options;
 
@@ -26,6 +27,7 @@ namespace App.Services.Customer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICustomerService, CustomerService>();
             services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
             services.Configure<DatabaseSettings>(Configuration.GetSection("DatabaseSettings"));
